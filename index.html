@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="style.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Karla&display=swap"
       rel="stylesheet"
       />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
       rel="icon"
       type="image/png"
@@ -23,12 +26,18 @@
         <img src="images/logo.svg" alt="logo" />
       </div>
       <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <img id="btn" src="images/icon-hamburger.svg">
+          <img id="cancel" src="images/icon-close.svg">
+        </label>
         <ul class="nav-links">
           <li><a class="nav-link" href="#">How we work</a></li>
           <li><a class="nav-link" href="#">Blog</a></li>
           <li><a class="nav-link" href="#">Account</a></li>
           <li><a class="nav-link" id="last" href="#"><b>View plans</b></a></li>
         </ul>
+
       </nav>
     </header>
     <main>
@@ -49,6 +58,13 @@
         </div>
         <div class="bg-right">
           <img src="images/bg-pattern-intro-right-desktop.svg">
+          <picture>
+            <source media="(min-width: 650px)"
+              srcset="images/bg-pattern-intro-right-desktop.svg">
+            <source media="(min-width: 465px)"
+              srcset="images/bg-pattern-intro-right-mobile.svg">
+
+          </picture>
         </div>
 
         <div class="cover">

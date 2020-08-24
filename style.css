@@ -90,6 +90,19 @@ nav {
   color: white;
   background-color: hsl(270, 9%, 17%);
 }
+
+#btn,
+#cancel {
+  font-size: 30px;
+  margin-left: 100%;
+  line-height: 80px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+
 /* end of nav */
 
 /* start pressentation */
@@ -323,4 +336,86 @@ footer {
 }
 .footer-link:hover {
   text-decoration: underline;
+}
+/*end of footer*/
+/*RESPONSIVE DESIGN*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/*custom*/
+@media only screen and (max-width: 950px) {
+  .logo-container {
+    font-size: 30px;
+    padding-left: 10px;
+  }
+  .nav-link {
+    font-size: 25px;
+    color: hsl(0, 0%, 98%);
+  }
+  #last {
+    box-sizing: border-box;
+    width: 20rem;
+    padding: 10px;
+    border: 2px solid hsl(0, 0%, 98%);
+    text-align: center;
+    color: hsl(0, 0%, 98%);
+  }
+  label #btn {
+    display: block;
+    margin-right: 0;
+  }
+  .nav-links {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: hsl(270, 9%, 17%);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    display: block;
+    transition: all 0.5s;
+  }
+  .nav-links li {
+    display: block;
+    margin: 20px 0;
+    line-height: 30px;
+  }
+
+  #check:checked ~ .nav-links {
+    left: 0%;
+  }
+  #check:checked ~ .checkbtn > #btn {
+    display: none;
+  }
+  #check:checked ~ .checkbtn > #cancel {
+    display: block;
+  }
+}
+@media only screen and (min-width: 951px) {
+  .nav-links {
+    width: 45rem;
+    padding-left: 30%;
+  }
+  .nav-link {
+    font-size: 15px;
+    margin: 0 0;
+  }
+  .cover img {
+    position: relative;
+
+    margin-left: 50%;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
 }
