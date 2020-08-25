@@ -42,6 +42,7 @@ h5 {
   font-size: 14px;
   text-transform: uppercase;
 }
+
 /* start of nav */
 header {
   display: flex;
@@ -109,6 +110,12 @@ nav {
 .presentation {
   height: 130vh;
 }
+.bg-left-mobile,
+.bg-right-mobile,
+.intro-mobile {
+  display: none;
+}
+
 .intro {
   display: flex;
   width: 100%;
@@ -136,6 +143,10 @@ h2 {
   line-height: 25px;
   color: hsl(0, 0%, 98%);
   word-spacing: 2px;
+}
+pre {
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
 }
 .intro-btn {
   display: inline-block;
@@ -340,19 +351,6 @@ footer {
 /*end of footer*/
 /*RESPONSIVE DESIGN*/
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-}
-
-/*custom*/
 @media only screen and (max-width: 950px) {
   .logo-container {
     font-size: 30px;
@@ -378,12 +376,18 @@ footer {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: hsl(270, 9%, 17%);
+    background: hsl(270, 9%, 17%) url("images/bg-pattern-mobile-nav.svg")
+      repeat-x center center;
+    background-size: 100%;
+    background-position: center;
+    background-position-y: 300px;
+    background-repeat: no-repeat;
     top: 80px;
     left: -100%;
     text-align: center;
     display: block;
     transition: all 0.5s;
+    margin-top: -10px;
   }
   .nav-links li {
     display: block;
@@ -400,22 +404,96 @@ footer {
   #check:checked ~ .checkbtn > #cancel {
     display: block;
   }
-}
-@media only screen and (min-width: 951px) {
-  .nav-links {
-    width: 45rem;
-    padding-left: 30%;
-  }
-  .nav-link {
-    font-size: 15px;
-    margin: 0 0;
-  }
-  .cover img {
+  /*end of nav*/
+  .presentation {
+    height: 200%;
     position: relative;
+  }
+  .bg-right,
+  .bg-left,
+  .cover img {
+    display: none;
+  }
+  .intro-mobile {
+    display: block;
+    width: 100%;
+  }
+  .bg-left-mobile {
+    margin-top: -23rem;
+    height: 12.5rem;
+    width: 22rem;
+    display: block;
+    position: absolute;
+  }
 
-    margin-left: 50%;
+  .intro-text hr {
+    display: none;
+  }
+  .intro-text br {
+    display: none;
+  }
+  .intro-text {
+    padding-top: 100px;
+    height: 35rem;
+    width: 40%;
+    padding-bottom: 400px;
+    justify-content: center;
+  }
+  .intro-text h2,
+  pre {
+    justify-content: center;
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+  .intro-text p {
+    padding-top: 30px;
+    justify-content: center;
+    font-size: 50px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 18px;
+  }
+  .intro-btn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+  }
+  .bg-right-mobile {
+    float: right;
+    clear: right;
+    margin-top: 6rem;
+    height: 32.5rem;
+    width: 7rem;
+    display: block;
+    overflow: hidden;
+  }
+  /*middle*/
+  .middle {
+    margin-top: 16rem;
   }
 }
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1200px) {
+
+@media (max-width: 1345px) {
+  .cover img {
+    position: static;
+    margin-top: -35%;
+    width: 40%;
+  }
+  h2 {
+    font-size: 50px;
+
+    line-height: 70px;
+  }
+  .intro-text p {
+    line-height: 25px;
+
+    word-spacing: 2px;
+    display: inline-block;
+    width: 350px;
+    text-align: justify;
+  }
 }
