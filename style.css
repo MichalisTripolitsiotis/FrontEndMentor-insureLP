@@ -18,6 +18,7 @@ body {
   font-family: "Karla", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  width: 100%;
 }
 
 h1,
@@ -110,6 +111,7 @@ nav {
 .presentation {
   height: 130vh;
 }
+.how-mobile,
 .bg-left-mobile,
 .bg-right-mobile,
 .intro-mobile {
@@ -199,6 +201,7 @@ pre {
   font-size: 50px;
   font-weight: 500;
   line-height: 160px;
+  color: hsl(270, 9%, 17%);
 }
 .main-middle {
   display: flex;
@@ -225,8 +228,9 @@ pre {
 }
 /* end of middle */
 /* start more */
+
 .more-section {
-  height: 90vh;
+  height: 500px;
 }
 .more-section h2 {
   font-size: 50px;
@@ -419,7 +423,7 @@ footer {
     width: 100%;
   }
   .bg-left-mobile {
-    margin-top: -23rem;
+    margin-top: -22rem;
     height: 12.5rem;
     width: 22rem;
     display: block;
@@ -443,16 +447,16 @@ footer {
   pre {
     justify-content: center;
     font-size: 50px;
-    line-height: 50px;
+    line-height: 10px;
     text-align: center;
+    padding-top: 50px;
+    padding-right: 60px;
   }
   .intro-text p {
     padding-top: 30px;
     justify-content: center;
-    font-size: 50px;
-    line-height: 35px;
+    line-height: 50px;
     text-align: center;
-    font-size: 18px;
   }
   .intro-btn {
     margin-top: 30px;
@@ -460,23 +464,150 @@ footer {
     justify-content: center;
     width: 50%;
     text-align: center;
-    margin-left: 25%;
+    margin-left: 65px;
   }
   .bg-right-mobile {
     float: right;
     clear: right;
-    margin-top: 6rem;
-    height: 32.5rem;
-    width: 7rem;
+    margin-top: -10rem;
+    height: 20rem;
+    width: 10rem;
     display: block;
     overflow: hidden;
   }
   /*middle*/
   .middle {
-    margin-top: 16rem;
+    height: 80rem;
+  }
+  .middle hr {
+    border: 0;
+    height: 2px;
+    clear: both;
+    display: block;
+    width: 196px;
+    background-color: hsl(273, 4%, 51%);
+    margin: auto;
+  }
+  .middle h3 {
+    margin-top: 10px;
+    line-height: 50px;
+    font-size: 40px;
+    padding-left: 80px;
+    display: inline-block;
+  }
+  .main-middle h4 {
+    text-align: center;
+  }
+  .main-middle {
+    margin-top: -10%;
+    height: 26rem;
+    display: block;
+    padding-top: -50rem;
+  }
+  .left-middle,
+  .center-middle,
+  .right-middle {
+    height: 200px;
+    width: 400px;
+    margin-top: 7rem;
+  }
+  .main-p {
+    text-align: center;
+  }
+  .icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*more section*/
+  .more-section {
+    min-width: 400px;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .how-desktop {
+    display: none;
+  }
+  .more {
+    display: inline-block;
+    width: 100%;
+  }
+  .more h2 {
+    padding-top: 30px;
+    line-height: 40px;
+    font-size: 35px;
+    text-align: center;
+    padding-right: 60px;
+  }
+  .more-btn {
+    margin-top: 30px;
+    display: flex;
+    font-size: 13px;
+    width: 160px;
+    text-align: center;
+    margin-left: 40px;
+  }
+  .more-section .how-mobile {
+    display: inline-block;
+    width: 150px;
+    margin-left: auto;
+    margin-right: 40px;
+    padding: 0;
+  }
+  /*end of more*/
+  .attribution {
+    padding-top: 80%;
+  }
+  .conclusion-img {
+    display: none;
+  }
+
+  .conclusion {
+    display: block;
+    height: 100%;
+  }
+
+  .conclusion-container {
+    padding-top: 50px;
+    margin-left: 160px;
+    display: flex;
+    margin-bottom: -50px;
+  }
+  .logo {
+    margin: 0 auto;
+    padding-left: 10px;
+  }
+  .icons {
+    margin-top: 14%;
+  }
+  footer {
+    display: block;
+    margin-top: 2%;
+    text-align: center;
+  }
+
+  .footer-one {
+    margin-left: 160px;
+    padding-top: 2rem;
+  }
+  .footer-two,
+  .footer-three {
+    margin-left: 160px;
+    margin-top: 7rem;
+    padding-top: 10px;
+  }
+  .footer-four {
+    margin-left: 160px;
+    margin-top: 6rem;
+  }
+  .footer-link {
+    display: inline-block;
+    text-align: justify;
+    text-align: center;
   }
 }
 
+/* MIDDLE RESPONSIVE*/
 @media (max-width: 1345px) {
   .cover img {
     position: static;
@@ -495,5 +626,8 @@ footer {
     display: inline-block;
     width: 350px;
     text-align: justify;
+  }
+  .more-section {
+    padding-top: 4rem;
   }
 }
